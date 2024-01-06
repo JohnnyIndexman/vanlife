@@ -12,7 +12,7 @@ export function loader(){
 
 function HostVans() {
     const vans = useLoaderData()
-    const vanes = vans.filter(van => van.hostId === van.hostId)
+    const vanes = vans.filter(van => van.hostId)
 
 
     const vanHosts = vanes.map(van => (
