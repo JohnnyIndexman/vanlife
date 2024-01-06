@@ -4,7 +4,7 @@ import VanInfo from '../VanInfo';
 
 function HostVanDetail() {
   const { id } = useParams();
-  const vans = VanInfo().vanshost.filter(van => van.hostId == id);
+  const vans = VanInfo().vanshost.filter(van => van.hostId === Number(id));
   
 
   const styleNav = {

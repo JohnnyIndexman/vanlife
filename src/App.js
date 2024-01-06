@@ -20,7 +20,7 @@ import Details from './Pages/Host/HostVans/Details';
 import Pricing from './Pages/Host/HostVans/Pricing';
 import Error from './Pages/Error';
 import Mistake from './Components/Mistake';
-{/*import HostVanLayout from './Pages/Host/HostVans/HostVanLayout';*/}
+
 
 
 

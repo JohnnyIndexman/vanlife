@@ -31,7 +31,7 @@ function Contact() {
         <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.9542218804236!2d-95.99328252531492!3d30.095497374897867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8646cc0a5cf0f4f1%3A0x103242a0436c12b2!2sPrairie%20View%20A%26M%20University!5e0!3m2!1sen!2sng!4v1704387157969!5m2!1sen!2sng"
           style={{ border: 0, width: '450px', height: "420px", alignSelf: 'center' }}
           allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" className='map'>
+          referrerpolicy="no-referrer-when-downgrade" className='map' title='contact map'>
         </iframe>
         </div>
       </div>

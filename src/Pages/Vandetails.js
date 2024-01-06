@@ -15,7 +15,7 @@ function Vandetails() {
 
   const vanDetails = vanes.map(van => (
     <div key={van.id}>
-      <img src={van.image} />
+      <img src={van.image} alt='Simple and Rugged vans'/>
       <h3>{van.title}</h3>
       <p className='price'>{van.price}</p>
       <p id='describe'>{van.description}</p>
