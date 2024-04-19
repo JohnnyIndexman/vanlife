@@ -1,11 +1,18 @@
 import React from 'react'
-import { Link, useLoaderData, useParams } from 'react-router-dom'
+import { Link, useLoaderData, useParams, redirect } from 'react-router-dom'
 import VanInfo from './VanInfo'
+import { authentication } from '../Components/authentication'
 
 
 const vans = VanInfo().vans
-export function loader() {
+export async function loader() {
+  try{
+    await authentication()
   return vans
+  }catch(error){
+    console.log(error, 'errors')
+    return redirect('/login')
+  }
 }
 
 function Vandetails() {
@@ -14,7 +21,7 @@ function Vandetails() {
   const vanes = vans.filter(van => van.id === Number(id))
 
   const vanDetails = vanes.map(van => (
-    <div key={van.id}>
+    <div key={van.id} className='div-details'>
       <img src={van.image} alt='Simple and Rugged vans'/>
       <h3>{van.title}</h3>
       <p className='price'>{van.price}</p>

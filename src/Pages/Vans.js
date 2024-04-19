@@ -1,12 +1,20 @@
-import { Link, useLoaderData, useSearchParams } from 'react-router-dom'
+import { Link, useLoaderData, useSearchParams, redirect } from 'react-router-dom'
 import VanInfo from './VanInfo'
+import { authentication } from '../Components/authentication'
 
 
 
 const vans = VanInfo().vans
 
-export function loader(){
-  return vans
+export async function loader(){
+  try{
+    await authentication()
+    console.log('Data loaded successfully');
+    return vans
+  }catch( error ){
+  console.log(error, 'errors')
+  return redirect('/login')
+  }
 }
 
 function Vans() {

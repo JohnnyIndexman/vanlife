@@ -56,6 +56,12 @@ function Header() {
           >
             Host
           </NavLink>
+          {/*<NavLink
+            to='/login'
+            style={({ isActive }) => isActive ? styleNav : null}
+          >
+            Login
+  </NavLink>*/}
         </nav>
         {isClose && <RiMenu4Line
           onClick={toggleOpen}
@@ -94,6 +100,12 @@ function Header() {
         >
           Host
         </NavLink>
+       { /*<NavLink
+            to='/login'
+            style={({ isActive }) => isActive ? styleNav : null}
+          >
+            Login
+          </NavLink>*/}
       </nav>}
     </div>
   )

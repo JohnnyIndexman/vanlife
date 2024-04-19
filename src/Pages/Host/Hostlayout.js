@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 
+
 function Hostlayout() {
     const styleNav = {
         fontWeight: 'bold',

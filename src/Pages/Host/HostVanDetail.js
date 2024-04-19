@@ -2,9 +2,11 @@ import React from 'react';
 import { NavLink, Outlet, useParams } from 'react-router-dom';
 import VanInfo from '../VanInfo';
 
+
 function HostVanDetail() {
   const { id } = useParams();
   const vans = VanInfo().vanshost.filter(van => van.hostId === Number(id));
+
   
 
   const styleNav = {

@@ -64,6 +64,11 @@ h1 > a{
   font-weight: 700;
 }
 
+.login h4{
+  margin-bottom: 20px;
+  color: red;
+}
+
 .home-h1{
   font-size: 50px;
   margin-bottom: 40px;
@@ -83,6 +88,7 @@ h1 > a{
 .home{
   box-sizing: border-box;
   margin-top: 50px;
+  margin-bottom: 40px;
   padding: 70px 50px 70px 50px;
   height: 100%;
   background-image: url(./Images/pexels-johannes-beckmann-13470682.jpg);
@@ -90,6 +96,10 @@ h1 > a{
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+}
+
+.login span{
+  color: rgb(250, 87, 87);
 }
 
 button{
@@ -240,6 +250,7 @@ button{
   margin-top: 50px;
   padding: 0px 50px 70px 50px;
   height: 100%;
+  display: flex;
 }
 .van-contain{
   box-sizing: border-box;
@@ -251,14 +262,22 @@ button{
   width: 100%;
   box-shadow: 0px 0px 3px gray;
   padding: 30px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .van-contain img{
-  width: 300px;
+  width: 60%;
   height: 300px;
   margin-bottom: 30px;
   border-radius: 10px;
+  align-self: center;
+}
+
+.mistake{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .van-contain i{
@@ -270,12 +289,21 @@ button{
   font-family: 'Alata', sans-serif;
   font-weight: bolder;
   margin-bottom: 15px;
+  text-align: center;
 }
 
  .price{
   font-weight: bolder;
   font-family: 'Alata', sans-serif;
   margin-bottom: 15px;
+  text-align: center;
+}
+
+.div-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #describe{
@@ -306,7 +334,7 @@ button{
 .footer{
   box-sizing: border-box;
   border: 1px solid black;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 0px 0px;
   padding: 40px 30px 40px 30px;
   display: flex;
   align-items: center;
@@ -327,6 +355,7 @@ button{
   gap: 30px;
   box-shadow: 0px 0px 8px gray;
   border-radius: 5px;
+  padding: 20px;
 }
 
 .class1 img{
@@ -504,6 +533,48 @@ font-family: 'Alata', sans-serif;
 
 .details1 p{
   font-size: 18px;
+}
+
+.login{
+  padding: 0px 50px 70px 50px;
+  font-family: 'Alata', sans-serif;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.login-input{
+  margin-bottom: 20px;
+}
+
+.login-input input{
+  width: 94%;
+}
+
+textarea:focus{
+  border: 2px solid  rgb(253, 180, 69);;
+  outline: none !important;
+}
+
+  input:focus{
+  border: 2px solid  rgb(253, 180, 69);;
+  outline: none !important;
+}
+
+.login h1{
+  margin-bottom: 20px;
+}
+
+.login button{
+  width: 100%;
+}
+
+.login form{
+  width: 400px;
 }
 
 @media (max-width : 760px){

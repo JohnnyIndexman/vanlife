@@ -2,7 +2,7 @@ import React from 'react'
 
 function Mistake() {
   return (
-    <div>
+    <div className='mistake'>
         <h1>An error occured!!</h1>
     </div>
   )
