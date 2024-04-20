@@ -42,22 +42,75 @@ function Login() {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   validation();
+
+  //   try {
+  //     let isAuthenticated = await authentication(); 
+  //     if (isValid && isAuthenticated.isLoggedIn) {
+        
+  //       showToastMessage();
+  //       navigate('/vans');
+
+  //     }
+  //   } catch (error) {
+  //     console.error('Error during authentication:', error);
+  //   }
+  // };
+  //const history = useHistory();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+    
+  //   validation();
+  
+  //   if (!mailError && !passwordError) {
+  //     try {
+  //       let isAuthenticated = await authentication() 
+  //       console.log('Authentication Result:', isAuthenticated)
+  //       if (isAuthenticated && isAuthenticated.isLoggedIn) {
+  //         console.log('User is authenticated, redirecting...')
+  //         showToastMessage()
+  //         navigate('/vans')
+  //       }else{
+  //         console.log('Authentication failed or user is not logged in')
+  //         toast.error('Authentication failed. Please check your credentials.')
+  //       }
+  //     } catch (error) {
+  //       console.error('Error during authentication:', error)
+  //       toast.error('Error during authentication. Please try again.')
+  //     }
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     validation();
-
-    try {
-      let isAuthenticated = await authentication(); // Pass the navigate function
-      if (isValid && isAuthenticated.isLoggedIn) {
+  
+    if (!mailError && !passwordError) {
+      try {
+        let isAuthenticated = await authentication(); // Pass the navigate function
         
-        showToastMessage();
-        navigate('/vans');
-
+        console.log('Authentication Result:', isAuthenticated); // Log authentication result
+        
+        if (isAuthenticated && isAuthenticated.isLoggedIn) {
+          console.log('User is authenticated, redirecting...'); // Log redirection
+          showToastMessage();
+          navigate('/vans');
+        } else {
+          console.log('Authentication failed or user is not logged in');
+          // Show error toast or message to the user
+          toast.error('Authentication failed. Please check your credentials.');
+        }
+      } catch (error) {
+        console.error('Error during authentication:', error);
+        // Show error toast or message to the user
+        toast.error('Error during authentication. Please try again.');
       }
-    } catch (error) {
-      console.error('Error during authentication:', error);
     }
   };
+
 
   const showToastMessage = () => {
     if (isValid) {
